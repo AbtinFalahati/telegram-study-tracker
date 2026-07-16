@@ -1,0 +1,2 @@
+# Sprint 0 intentionally has no runtime dependencies.
+# Dependencies will be introduced only when a sprint needs them.

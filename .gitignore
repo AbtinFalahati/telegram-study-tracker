@@ -1,0 +1,28 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Test, type-checking, and coverage output
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Local secrets and configuration
+.env
+.env.*
+!.env.example
+
+# SQLite databases created during local development
+*.db
+*.sqlite3
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
