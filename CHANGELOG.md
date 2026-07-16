@@ -9,3 +9,5 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 ### Added
 
 - Sprint 0 project documentation and repository foundation.
+- Sprint 3 package structure and dependency declarations.
+- Sprint 4 minimal Telegram application with a `/start` command.

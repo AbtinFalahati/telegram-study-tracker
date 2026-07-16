@@ -8,12 +8,27 @@ This roadmap is intentionally provisional. We will refine each sprint before imp
 - Add project metadata and Git hygiene files.
 - Record initial architectural decisions.
 
-## Sprint 1 — Bot skeleton
+## Sprint 1 — Local Git foundation
+
+- Initialize the repository and make the first Conventional Commit.
+- Configure local commit attribution and the `main` branch.
+
+## Sprint 2 — Publish to GitHub
+
+- Create and connect the GitHub repository.
+- Push `main` and verify synchronization.
+
+## Sprint 3 — Technical foundation
+
+- Add the `src`, `tests`, and `assets` structure.
+- Define the initial application boundaries without implementation.
+- Add and pin the Telegram library dependency.
+
+## Sprint 4 — Bot skeleton
 
 - Create the Python package and minimal application entry point.
-- Connect safely to the Telegram Bot API using configuration from environment variables.
-- Add a basic command and its automated tests where practical.
-- Document local setup and how to run the bot.
+- Load configuration from environment variables.
+- Add the first executable behavior and its tests.
 
 ## Future milestones
 

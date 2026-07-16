@@ -47,4 +47,21 @@ SQLite is bundled with Python, easy to inspect, and appropriate for a small bot.
 
 ### Consequences
 
-The repository starts simple and avoids unused packages. Sprint 1 will select and pin the Telegram library after its requirements are defined.
+The repository starts simple and avoids unused packages. Sprint 3 selects and pins the Telegram library now that the project has a clear integration boundary.
+
+## ADR-004: Use `python-telegram-bot` as the Telegram integration library
+
+**Status:** Accepted  
+**Date:** 2026-07-16
+
+### Context
+
+The project needs a Python interface to the Telegram Bot API but should avoid implementing HTTP requests and update parsing itself.
+
+### Decision
+
+Use `python-telegram-bot==22.8`, pinned in `requirements.txt`.
+
+### Consequences
+
+The project gains a maintained, high-level interface for future Telegram integration and reproducible dependency installation. The dependency does not create or contact a bot by itself.

@@ -6,15 +6,16 @@ This is an open-source learning project. Its goal is twofold: deliver a useful a
 
 ## Project status
 
-**Sprint 0 — project foundation.** No Telegram functionality has been implemented yet.
+**Sprint 4 — bot skeleton.** The bot runs and responds to `/start`, `/help`, `/about`, and `/ping`. Study-tracking features have not been implemented yet.
 
 ## Planned structure
 
 ```text
 telegram-study-tracker/
 ├── docs/                         # Architecture, decisions, and learning notes
-├── src/telegram_study_tracker/   # Application code (introduced in Sprint 1)
-├── tests/                        # Automated tests, mirroring src/ (introduced in Sprint 1)
+├── src/telegram_study_tracker/   # Application package, organized by responsibility
+├── tests/                        # Automated tests, mirroring application behavior
+├── assets/                       # Non-code project assets, such as diagrams
 ├── README.md                     # Project overview and contributor entry point
 ├── ROADMAP.md                    # High-level delivery plan
 ├── CHANGELOG.md                  # User-visible project changes
@@ -23,11 +24,34 @@ telegram-study-tracker/
 └── LICENSE                       # MIT license
 ```
 
-`src/` keeps importable application code separate from repository tooling and documentation. The package name uses underscores because Python identifiers cannot use hyphens. `tests/` is separate so quality checks never become production code. These folders will be created when Sprint 1 introduces the first executable feature; creating empty directories now would add no value because Git does not track them.
+`src/` keeps importable application code separate from repository tooling and documentation. The package name uses underscores because Python identifiers cannot use hyphens. `tests/` is separate so quality checks never become production code. Empty folders include `.gitkeep` solely because Git tracks files, not directories; these placeholders will disappear as each area receives real files.
 
 ## Getting started
 
-There is nothing to run during Sprint 0. The first setup and run instructions will be added with the first bot feature.
+## Run locally
+
+1. Create and activate a virtual environment:
+
+   ```powershell
+   python -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+   ```
+
+2. Copy `.env.example` to `.env`, then replace its placeholder with a Telegram bot token. Never commit `.env`.
+3. Install the package and its dependencies:
+
+   ```powershell
+   python -m pip install -r requirements.txt
+   python -m pip install -e .
+   ```
+
+4. Run the application:
+
+   ```powershell
+   python -m telegram_study_tracker
+   ```
+
+The bot currently supports `/start`, `/help`, `/about`, and `/ping`. Study-tracking commands are not implemented yet.
 
 ## Development principles
 

@@ -2,7 +2,7 @@
 
 ## Current state
 
-Sprint 0 contains no executable application code. This document defines the direction for the smallest useful architecture rather than prematurely committing to implementation details.
+Sprint 3 establishes the folder boundaries only. There is no executable application code, bot, handler, database, or Telegram API call yet.
 
 ## Guiding design
 
@@ -21,17 +21,28 @@ The interface layer translates Telegram-specific updates into application calls.
 
 ```text
 src/telegram_study_tracker/
-├── __init__.py
-├── main.py              # Application startup and dependency wiring
-├── bot/                 # Telegram command handlers and response formatting
-├── application/         # Use cases and business rules
-└── infrastructure/      # SQLite and other external integrations
+├── bot/                 # Application startup and Telegram client wiring
+├── handlers/            # Telegram-specific update and response adapters
+├── services/            # Use cases and business rules
+├── database/            # SQLite persistence boundary
+└── config/              # Configuration loading and validation
 ```
 
-We will add a folder only when a real feature needs it. For example, there is no database package until we persist study sessions.
+Sprint 4 adds only the startup, configuration, and Telegram wiring modules. The `database` and `services` folders remain empty because no persistence or business behavior exists yet.
 
 ## Dependencies
 
 - The Telegram integration will depend on a maintained Python Telegram library, selected in Sprint 1.
 - SQLite is included with Python, so no separate database server is required for the initial product.
 - Secrets such as a bot token must come from environment variables, never source control.
+
+## Sprint 4 execution flow
+
+```text
+main()
+  → load_settings() reads .env and validates TELEGRAM_BOT_TOKEN
+  → create_application() builds python-telegram-bot Application
+  → CommandHandler("start", start) is registered
+  → run_polling() receives /start and calls start()
+  → start() replies with the running confirmation
+```

@@ -1,2 +1,4 @@
-# Sprint 0 intentionally has no runtime dependencies.
-# Dependencies will be introduced only when a sprint needs them.
+# Telegram Bot API wrapper. Pinned for reproducible environments.
+python-telegram-bot==22.8
+# Loads local environment variables without committing secrets.
+python-dotenv==1.2.2
