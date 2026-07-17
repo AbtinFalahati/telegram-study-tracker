@@ -46,3 +46,16 @@ main()
   → run_polling() receives /start and calls start()
   → start() replies with the running confirmation
 ```
+
+## Diagrams
+
+Engineering diagrams are deliberately not produced yet. This project creates diagrams incrementally, only after the code they describe exists, so every diagram reflects the real implementation rather than a speculative future design.
+
+The following diagrams will be added as the corresponding work lands, not before:
+
+- **High-Level Architecture Diagram** — once more than one real layer is populated beyond the Sprint 4 skeleton.
+- **Request Flow Diagram** — for each major Telegram command, once the command and its full path through the layers are implemented.
+- **Database ER Diagram** — when SQLite persistence is introduced.
+- **AI Pipeline Diagram** — when AI-powered coaching features are introduced.
+
+No diagram is created ahead of the feature it documents.

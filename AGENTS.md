@@ -172,6 +172,35 @@ Architecture Overview (when appropriate)
 Source code comments remain English only.
 
 
+# LANGUAGE POLICY
+
+This project has two distinct audiences with two distinct languages.
+
+Telegram bot user-facing messages:
+
+Persian only.
+
+Every reply the bot sends to a Telegram user (confirmations, errors shown to
+the user, help text, prompts) must be written in Persian.
+
+Internal code:
+
+English only.
+
+Identifiers, function names, variable names, docstrings, code comments,
+exception messages raised inside the Domain and Service layers, and test
+code all remain in English, regardless of the bilingual documentation rule
+above.
+
+Boundary rule:
+
+Persian text may only appear inside the Telegram handler layer, at the
+point a message is sent to the user. The Domain layer must never construct
+or contain Persian strings. This keeps business logic testable and
+reviewable independent of language, and keeps translation changes isolated
+to one layer.
+
+
 # SECURITY
 
 Never expose secrets.

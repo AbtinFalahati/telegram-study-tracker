@@ -4,6 +4,8 @@ A Telegram bot that helps learners record study sessions, review progress, and b
 
 This is an open-source learning project. Its goal is twofold: deliver a useful application and demonstrate professional Python, Git, documentation, testing, and architecture practices.
 
+The bot's user-facing messages are written in Persian, since it is built for Persian-speaking users. All source code, documentation, and comments remain in English.
+
 ## Project status
 
 **Sprint 4 — bot skeleton.** The bot runs and responds to `/start`, `/help`, `/about`, and `/ping`. Study-tracking features have not been implemented yet.
@@ -64,3 +66,33 @@ The bot currently supports `/start`, `/help`, `/about`, and `/ping`. Study-track
 ## License
 
 Licensed under the [MIT License](LICENSE).
+
+---
+
+# ردیاب مطالعه تلگرام
+
+یک بات تلگرام که به یادگیرندگان کمک می‌کند جلسات مطالعه‌شان را ثبت کنند، پیشرفت خود را بررسی کنند و عادت‌های مطالعه‌ی پیوسته بسازند.
+
+این یک پروژه‌ی متن‌باز آموزشی است. هدف آن دوگانه است: ساخت یک اپلیکیشن کاربردی و نمایش شیوه‌های حرفه‌ای برنامه‌نویسی پایتون، Git، مستندسازی، تست، و معماری نرم‌افزار.
+
+پیام‌های بات برای کاربران به زبان فارسی نوشته می‌شوند، زیرا این بات برای کاربران فارسی‌زبان ساخته شده است. تمام کد منبع، مستندات، و توضیحات داخل کد به زبان انگلیسی باقی می‌مانند.
+
+## وضعیت پروژه
+
+**اسپرینت ۴ — اسکلت بات.** بات اجرا می‌شود و به دستورهای `/start`، `/help`، `/about`، و `/ping` پاسخ می‌دهد. قابلیت‌های ردیابی مطالعه هنوز پیاده‌سازی نشده‌اند.
+
+## شروع به کار
+
+برای راه‌اندازی و اجرای پروژه به‌صورت محلی، بخش «Getting started» در بالای همین سند (به زبان انگلیسی) را دنبال کنید. دستورها و مسیرهای فایل مستقل از زبان هستند.
+
+## اصول توسعه
+
+- در هر اسپرینت یک قابلیت کوچک و قابل تست ارائه می‌شود.
+- کد ساده و صریح به انتزاع‌های پیچیده ترجیح داده می‌شود.
+- تصمیم‌های فنی مهم در [`docs/decisions.md`](docs/decisions.md) ثبت می‌شوند.
+- تغییرات قابل مشاهده برای کاربر در [`CHANGELOG.md`](CHANGELOG.md) نگه‌داری می‌شوند.
+- کامیت‌های Git متمرکز و با پیام‌های شفاف انجام می‌شوند.
+
+## مجوز
+
+این پروژه تحت [مجوز MIT](LICENSE) منتشر شده است.

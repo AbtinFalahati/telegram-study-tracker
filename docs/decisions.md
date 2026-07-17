@@ -65,3 +65,20 @@ Use `python-telegram-bot==22.8`, pinned in `requirements.txt`.
 ### Consequences
 
 The project gains a maintained, high-level interface for future Telegram integration and reproducible dependency installation. The dependency does not create or contact a bot by itself.
+
+## ADR-005: Persian for user-facing bot messages, English for code and internal docs
+
+**Status:** Accepted
+**Date:** 2026-07-17
+
+### Context
+
+The bot's audience is Persian-speaking users, but the codebase, tests, and contributor documentation are written in English to stay reviewable and consistent with common open-source Python conventions.
+
+### Decision
+
+Every message a Telegram handler sends to a user is written in Persian. Everything else — identifiers, docstrings, code comments, domain and service exception messages, and internal documentation such as this decision log — remains in English. Persian text may only originate inside the handler layer, at the point a reply is constructed; the Domain layer must never construct or contain Persian strings. Public-facing documents (`README.md`, `CHANGELOG.md`) are bilingual, English first and Persian second.
+
+### Consequences
+
+Domain and service code stays language-agnostic, testable, and readable by any contributor regardless of Persian fluency. Translation changes are isolated to the handler layer instead of being scattered across business logic. Public documentation requires double the writing effort per update, which is an accepted cost for accessibility to Persian-speaking users and contributors.
