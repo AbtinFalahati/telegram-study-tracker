@@ -26,7 +26,7 @@ telegram-study-tracker/
 └── LICENSE                       # MIT license
 ```
 
-`src/` keeps importable application code separate from repository tooling and documentation. The package name uses underscores because Python identifiers cannot use hyphens. `tests/` is separate so quality checks never become production code. Empty folders include `.gitkeep` solely because Git tracks files, not directories; these placeholders will disappear as each area receives real files.
+`src/` keeps importable application code separate from repository tooling and documentation. The package name uses underscores because Python identifiers cannot use hyphens. `tests/` is separate s[...]
 
 ## Getting started
 
@@ -63,27 +63,87 @@ The bot currently supports `/start`, `/help`, `/about`, and `/ping`. Study-track
 - Keep user-facing changes in [`CHANGELOG.md`](CHANGELOG.md).
 - Make focused Git commits with clear messages.
 
-## License
+## License & Attribution
 
-Licensed under the [MIT License](LICENSE).
+### English
+
+This project is released under the **[MIT License](LICENSE)**.
+
+#### Legal Terms
+
+The MIT License permits anyone to:
+- Use, modify, and distribute this software for any purpose
+- Sublicense the software
+
+**Required by law:**
+- You must include a copy of the original copyright notice and license text in any copies or substantial portions of the software
+- The software is provided "as is," without warranties or liability
+
+For full legal terms, see the [LICENSE](LICENSE) file.
+
+#### Attribution (Requested, Not Required)
+
+While not legally required, attribution to the original project is appreciated whenever practical:
+
+```
+Telegram Study Tracker
+Created by Abtin Falahati
+
+Repository:
+https://github.com/AbtinFalahati/telegram-study-tracker
+```
+
+Your attribution helps the open-source community and is deeply appreciated.
+
+---
+
+### فارسی
+
+این پروژه تحت [مجوز MIT](LICENSE) منتشر شده است.
+
+#### شرایط قانونی
+
+مجوز MIT کسی‌ را برای موارد زیر اجازه می‌دهد:
+- استفاده، تغییر و توزیع این نرم‌افزار برای هر منظوری
+- تحت‌مجوز دادن نرم‌افزار
+
+**لازم‌الاجرا:**
+- شما باید اطلاعیه حق نشر اصلی و متن مجوز را در هر کپی یا بخش قابل توجه نرم‌افزار شامل کنید
+- نرم‌افزار «همانطور که هست» ارائه می‌شود بدون تضمین یا مسئولیت
+
+برای شرایط کامل، فایل [LICENSE](LICENSE) را ببینید.
+
+#### نسبت‌دهی (درخواست شده، نه الزامی)
+
+اگرچه قانونی الزام‌آور نیست، نسبت‌دهی به پروژه‌ی اصلی هر زمان که عملی باشد قدردانی می‌شود:
+
+```
+ردیاب مطالعه تلگرام
+ساخته‌شده توسط ابتین فلاحتی
+
+مخزن:
+https://github.com/AbtinFalahati/telegram-study-tracker
+```
+
+نسبت‌دهی شما به جامعه متن‌باز کمک می‌کند و از ما قدردانی می‌شود.
 
 ---
 
 # ردیاب مطالعه تلگرام
 
-یک بات تلگرام که به یادگیرندگان کمک می‌کند جلسات مطالعه‌شان را ثبت کنند، پیشرفت خود را بررسی کنند و عادت‌های مطالعه‌ی پیوسته بسازند.
+یک بات تلگرام که به یادگیرندگان کمک می‌کند جلسات مطالعه‌شان را ثبت کنند، پیشرفت خود را بررسی کنند و عادت‌ه[...]
 
-این یک پروژه‌ی متن‌باز آموزشی است. هدف آن دوگانه است: ساخت یک اپلیکیشن کاربردی و نمایش شیوه‌های حرفه‌ای برنامه‌نویسی پایتون، Git، مستندسازی، تست، و معماری نرم‌افزار.
+این یک پروژه‌ی متن‌باز آموزشی است. هدف آن دوگانه است: ساخت یک اپلیکیشن کاربردی و نمایش شیوه‌های حرفه‌ای بر[...]
 
-پیام‌های بات برای کاربران به زبان فارسی نوشته می‌شوند، زیرا این بات برای کاربران فارسی‌زبان ساخته شده است. تمام کد منبع، مستندات، و توضیحات داخل کد به زبان انگلیسی باقی می‌مانند.
+پیام‌های بات برای کاربران به زبان فارسی نوشته می‌شوند، زیرا این بات برای کاربران فارسی‌زبان ساخته شده است[...]
 
 ## وضعیت پروژه
 
-**اسپرینت ۴ — اسکلت بات.** بات اجرا می‌شود و به دستورهای `/start`، `/help`، `/about`، و `/ping` پاسخ می‌دهد. قابلیت‌های ردیابی مطالعه هنوز پیاده‌سازی نشده‌اند.
+**اسپرینت ۴ — اسکلت بات.** بات اجرا می‌شود و به دستورهای `/start`، `/help`، `/about`، و `/ping` پاسخ می‌دهد. قابلیت‌های ردی�[...]
 
 ## شروع به کار
 
-برای راه‌اندازی و اجرای پروژه به‌صورت محلی، بخش «Getting started» در بالای همین سند (به زبان انگلیسی) را دنبال کنید. دستورها و مسیرهای فایل مستقل از زبان هستند.
+برای راه‌اندازی و اجرای پروژه به‌صورت محلی، بخش «Getting started» در بالای همین سند (به زبان انگلیسی) را دنبال کنی�[...]
 
 ## اصول توسعه
 
@@ -93,6 +153,66 @@ Licensed under the [MIT License](LICENSE).
 - تغییرات قابل مشاهده برای کاربر در [`CHANGELOG.md`](CHANGELOG.md) نگه‌داری می‌شوند.
 - کامیت‌های Git متمرکز و با پیام‌های شفاف انجام می‌شوند.
 
-## مجوز
+## مجوز و نسبت‌دهی
+
+### English
+
+This project is released under the **[MIT License](LICENSE)**.
+
+#### Legal Terms
+
+The MIT License permits anyone to:
+- Use, modify, and distribute this software for any purpose
+- Sublicense the software
+
+**Required by law:**
+- You must include a copy of the original copyright notice and license text in any copies or substantial portions of the software
+- The software is provided "as is," without warranties or liability
+
+For full legal terms, see the [LICENSE](LICENSE) file.
+
+#### Attribution (Requested, Not Required)
+
+While not legally required, attribution to the original project is appreciated whenever practical:
+
+```
+Telegram Study Tracker
+Created by Abtin Falahati
+
+Repository:
+https://github.com/AbtinFalahati/telegram-study-tracker
+```
+
+Your attribution helps the open-source community and is deeply appreciated.
+
+---
+
+### فارسی
 
 این پروژه تحت [مجوز MIT](LICENSE) منتشر شده است.
+
+#### شرایط قانونی
+
+مجوز MIT کسی‌ را برای موارد زیر اجازه می‌دهد:
+- استفاده، تغییر و توزیع این نرم‌افزار برای هر منظوری
+- تحت‌مجوز دادن نرم‌افزار
+
+**لازم‌الاجرا:**
+- شما باید اطلاعیه حق نشر اصلی و متن مجوز را در هر کپی یا بخش قابل توجه نرم‌افزار شامل کنید
+- نرم‌افزار «همانطور که هست» ارائه می‌شود بدون تضمین یا مسئولیت
+
+برای شرایط کامل، فایل [LICENSE](LICENSE) را ببینید.
+
+#### نسبت‌دهی (درخواست شده، نه الزامی)
+
+اگرچه قانونی الزام‌آور نیست، نسبت‌دهی به پروژه‌ی اصلی هر زمان که عملی باشد قدردانی می‌شود:
+
+```
+ردیاب مطالعه تلگرام
+ساخته‌شده توسط ابتین فلاحتی
+
+مخزن:
+https://github.com/AbtinFalahati/telegram-study-tracker
+```
+
+نسبت‌دهی شما به جامعه متن‌باز کمک می‌کند و از ما قدردانی می‌شود.
