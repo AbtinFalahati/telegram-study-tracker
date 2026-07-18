@@ -4,7 +4,13 @@ import unittest
 from types import SimpleNamespace
 from unittest.mock import AsyncMock
 
-from telegram_study_tracker.handlers.commands import about, help_command, ping, start
+from telegram_study_tracker.handlers.commands import (
+    about,
+    help_command,
+    log_minutes,
+    ping,
+    start,
+)
 
 
 class CommandResponseTests(unittest.IsolatedAsyncioTestCase):
@@ -44,3 +50,34 @@ class CommandResponseTests(unittest.IsolatedAsyncioTestCase):
         await ping(update, None)
 
         message.reply_text.assert_awaited_once_with("Pong!")
+
+    async def test_log_replies_with_persian_confirmation_for_valid_minutes(self) -> None:
+        message = AsyncMock()
+        update = SimpleNamespace(effective_message=message)
+        context = SimpleNamespace(args=["45"])
+
+        await log_minutes(update, context)
+
+        message.reply_text.assert_awaited_once_with("45 دقیقه مطالعه ثبت شد. آفرین!")
+
+    async def test_log_replies_with_persian_error_for_invalid_minutes(self) -> None:
+        message = AsyncMock()
+        update = SimpleNamespace(effective_message=message)
+        context = SimpleNamespace(args=["not-a-number"])
+
+        await log_minutes(update, context)
+
+        message.reply_text.assert_awaited_once()
+        reply_text = message.reply_text.await_args.args[0]
+        self.assertIn("عدد صحیح مثبت", reply_text)
+
+    async def test_log_replies_with_persian_error_for_missing_argument(self) -> None:
+        message = AsyncMock()
+        update = SimpleNamespace(effective_message=message)
+        context = SimpleNamespace(args=[])
+
+        await log_minutes(update, context)
+
+        message.reply_text.assert_awaited_once()
+        reply_text = message.reply_text.await_args.args[0]
+        self.assertIn("عدد صحیح مثبت", reply_text)
