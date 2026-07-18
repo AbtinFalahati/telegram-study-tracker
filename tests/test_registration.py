@@ -15,6 +15,6 @@ class CommandRegistrationTests(unittest.TestCase):
         register_command_handlers(application)
 
         registered_commands = {
-            call.args[0].commands[0] for call in application.add_handler.call_args_list
+            next(iter(call.args[0].commands)) for call in application.add_handler.call_args_list
         }
-        self.assertEqual(registered_commands, {"start", "help", "about", "ping"})
+        self.assertEqual(registered_commands, {"start", "help", "about", "ping", "log"})
